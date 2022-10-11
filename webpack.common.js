@@ -83,7 +83,14 @@ module.exports = {
       filename: './index.html',
       chunks: ['index']
     }),
-
+ //Lifehacks
+     new HtmlWebpackPlugin({
+       hash: true,
+       scriptLoading: 'blocking',
+       template: './src/lifehacks.html',
+       filename: './lifehacks.html',
+       chunks: ['index']
+     }),
     // Internal pages
     new HtmlWebpackPlugin({
       hash: true,
